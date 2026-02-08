@@ -36,7 +36,22 @@ Original:
 Add this line (example):
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
+## Footer
+Displays:
+Pravin Mishra Portfolio v1.0 — Deployed on <DD Mon YYYY> — By Anthonia Adekunle
+
+### Deploy date generation
+The deploy date is generated in the browser using JavaScript:
+
+```html
+<span id="deployDate"></span>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const formatted = new Date().toLocaleDateString("en-GB", { day:"2-digit", month:"short", year:"numeric" });
+    document.getElementById("deployDate").textContent = formatted;
+  });
+</script>
+
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
