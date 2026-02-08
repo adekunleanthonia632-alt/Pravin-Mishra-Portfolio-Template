@@ -603,12 +603,24 @@
         <p>©</span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
         <p>
-        Pravin Mishra Portfolio v1.0 — Deployed on 07 Feb 2026 — By Anthonia Adekunle </Student>
+        Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Anthonia Adekunle </Student>
         </p>
       </div>
       
     </div>
   </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const d = new Date();
+    const formatted = d.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    }); // e.g. "07 Feb 2026"
+
+    document.getElementById("deployDate").textContent = formatted;
+  });
+</script>
 
 
 
